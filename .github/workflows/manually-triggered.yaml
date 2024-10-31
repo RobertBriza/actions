@@ -1,6 +1,36 @@
 name: Manually Triggered Workflow
 on:
   workflow_dispatch:
+    inputs:
+      string:
+        description: A string input
+        type: string
+        required: false
+        default: "Default value"
+      number:
+        description: A number input
+        type: number
+        required: false
+        default: 42
+      boolean:
+        description: A boolean input
+        type: boolean
+        required: false
+        default: true
+      choice:
+        description: A choice input
+        type: string
+        required: false
+        default: "Choice 1"
+        options:
+          - Choice 1
+          - Choice 2
+          - Choice 3
+      environment:
+        description: An environment input
+        type: environment
+        required: false
+        default: production
 
 jobs:
   log-info:
