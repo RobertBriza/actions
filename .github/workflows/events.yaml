@@ -1,6 +1,12 @@
 name: Repository Events
 on:
   push:
+    branches:
+      - main
+      - "week-**"
+      - "!MAIN-T-**"
+    tags:
+        - "v1.*"
   pull_request:
     types: [opened, assigned, synchronize, reopened]
   issues:
