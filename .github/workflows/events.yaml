@@ -1,8 +1,13 @@
 name: Repository Events
-on: [push, pull_request, issues]
+on:
+  push:
+  pull_request:
+    types: [opened, assigned, synchronize, reopened]
+  issues:
+    types: [opened, edited]
 
 jobs:
-  ceckout-test:
+  checkout-test:
     runs-on: ubuntu-latest
     steps:
       - run: |
