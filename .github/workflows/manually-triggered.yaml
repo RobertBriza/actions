@@ -19,7 +19,7 @@ on:
         default: true
       choice:
         description: A choice input
-        type: string
+        type: choice
         required: false
         default: "Choice 1"
         options:
